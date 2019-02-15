@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CheckBox avec TWIG dans symfony4! {% endblock %}
+
+{% block body %}
+
+<div id="main">
+    <div id="navgauche">
+        {{ form_start(formPersonne) }}
+            <div class="section">
+                <br>
+                {# {{ form_widget(form.save, { 'label': 'Click me' }) }} #}
+                {{form_widget(formPersonne.nom_test2 , {'attr':  {'placeholder':"Nom ", 'ng-model':"firstName", 'id':"afficher_pendant_la_saisaie_passeport" }})}}
+                {{form_widget(formPersonne.date , {'attr': {'placeholder':"Date ", 'ng-model':"amount" }})}}
+                {{form_widget(formPersonne.cocher , {'attr': { 'ng-model':"lastName" }})}}
+            </div>
+            <div class="section" >		                                   
+                <button type="submit" style="background-color: #D4D7C4;  height: 30px; width:150px;">
+                   <a href="#">Enregistrer</a>        
+                </button>                       
+            </div>
+                                                        
+                                               
+        {{ form_end(formPersonne) }} 
+    </div>
+</div>
+{% endblock %}

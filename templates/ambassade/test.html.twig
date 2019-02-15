@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Base5Controller!{% endblock %}
+
+{% block body %}
+
+<div id="main">
+    <div id="navgauche">
+        {{ form_start(formPersonne) }}
+            <div class="section">
+                <br>
+                {# {{ form_widget(form.save, { 'label': 'Click me' }) }} #}
+                {{form_widget(formPersonne.test_nom , {'attr':  {'placeholder':"Nom de test", 'ng-model':"firstName", 'id':"afficher_pendant_la_saisaie_passeport" }})}}
+                {{form_widget(formPersonne.test_prenom , {'attr': {'placeholder':"Prenom de test", 'ng-model':"lastName" }})}}
+                {{form_widget(formPersonne.test_date , {'attr': {'placeholder':"Date de test", 'ng-model':"amount" }})}}
+            </div>
+            <div class="section" >		                                   
+                <button type="submit" style="background-color: #D4D7C4;  height: 30px; width:150px;">
+                   <a href="#">Enregistrer</a>        
+                </button>                       
+            </div>
+                                                        
+                                               
+        {{ form_end(formPersonne) }} 
+    </div>
+</div>
+{% endblock %}
