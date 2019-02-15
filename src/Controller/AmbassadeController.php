@@ -59,7 +59,7 @@ class AmbassadeController extends AbstractController
         $form->handleRequest($request); 
             
         if($form->isSubmitted() && $form->isValid()){
-      
+            // ...
             ($check->getCocher()) ? $check->setCocher('Envois') : $check->setCocher('NON');           
             $manager->persist($check);
             $manager->flush();
